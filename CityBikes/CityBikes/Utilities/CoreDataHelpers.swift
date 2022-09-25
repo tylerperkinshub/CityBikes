@@ -18,6 +18,23 @@ public class CoreDataHelper {
         self.context = context
     }
     
+    public func bikeNetwork(city: String,country: String,latitude: Double,longitude: Double,company: [String], name: String,id: String) {
+        let newBikeNetwork = NSEntityDescription.insertNewObject(forEntityName: "BikeNetwork", into: context) as! BikeNetwork
+        newBikeNetwork.city = city
+        newBikeNetwork.country = country
+        newBikeNetwork.latitude = latitude
+        newBikeNetwork.longitude = longitude
+        newBikeNetwork.company = company
+        newBikeNetwork.name = name
+        newBikeNetwork.id = id
+        
+        do {
+            try context.save()
+        } catch {
+            
+        }
+        
+    }
     
     public func bikeNetworks() {
         let bikeNetworks = [

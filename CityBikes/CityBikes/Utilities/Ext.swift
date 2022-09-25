@@ -25,3 +25,15 @@ extension String {
       self = self.capitalizingFirstLetter()
     }
 }
+
+
+func returnCompaniesToString(companies: [String]) -> String {
+    
+    var returnedString = ""
+    
+    for i in companies {
+        returnedString.append(i + "\n")
+    }
+    
+    return returnedString
+}

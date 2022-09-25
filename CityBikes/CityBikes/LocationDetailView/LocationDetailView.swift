@@ -14,7 +14,7 @@ struct LocationDetailView: View {
     
 
     
-    //@State private var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.51121389999999, longitude: -0.1198244), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+    //@State private var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: CLLocationDegrees(bike.latitude), longitude: CLLocationDegrees(bike.longitude)), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
     let bike: BikeNetwork
 
     
@@ -24,6 +24,7 @@ struct LocationDetailView: View {
         VStack{
             NavigationView {
 
+                //Map(coordinateRegion: $mapRegion)
                 
             }
             .frame(width: UIScreen.screenWidth, height: 350)
@@ -46,9 +47,7 @@ struct LocationDetailView: View {
                 VStack(alignment: .leading){
                     Text("Companies")
                         .font(.system(size: 16, weight: .medium))
-                    Text(String("Bike one \nBike Two"))
-                        .font(.system(size: 16, weight: .light))
-                    Text("Serco Group plc")
+                    Text(returnCompaniesToString(companies: bike.company ?? []))
                         .font(.system(size: 16, weight: .light))
                     Spacer()
                 }

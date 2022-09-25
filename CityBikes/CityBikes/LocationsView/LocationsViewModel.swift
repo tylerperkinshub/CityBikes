@@ -14,8 +14,8 @@ final class LocationsViewModel: ObservableObject {
     
     @Environment(\.managedObjectContext) var moc
     
-    //let bikeNetworkManager = BikeNetworkManager()
-    
+
+
 
 }
 
