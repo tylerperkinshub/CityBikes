@@ -17,7 +17,7 @@ struct CityBikesApp: App {
         
         
         WindowGroup {
-            LocationsView()
+            LocationsView(bikesNetworkManager: BikeNetworkManager.init())
                 .environment(\.managedObjectContext, persistenceController.mainContext)
 
         }

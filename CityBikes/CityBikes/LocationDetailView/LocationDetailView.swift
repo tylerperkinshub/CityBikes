@@ -11,25 +11,20 @@ import MapKit
 struct LocationDetailView: View {
     
     let padding = CGFloat(8)
-    
-
-    
-    //@State private var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: CLLocationDegrees(bike.latitude), longitude: CLLocationDegrees(bike.longitude)), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
     let bike: BikeNetwork
+    
+    @StateObject private var viewModel = LocationDetailViewModel()
 
     
     var body: some View {
-        
  
         VStack{
             NavigationView {
-
-                //Map(coordinateRegion: $mapRegion)
+                Map(coordinateRegion: $viewModel.region)
                 
             }
             .frame(width: UIScreen.screenWidth, height: 350)
             .navigationTitle(String(bike.city ?? ""))
-            
             
             HStack {
                 VStack(alignment: .leading){
@@ -54,7 +49,9 @@ struct LocationDetailView: View {
                 .frame(width: (UIScreen.screenWidth / 2) - padding * 2, height: 100, alignment: .leading)
             }
             .frame(width: UIScreen.screenWidth, height: 150)
-            Spacer()
+            
         }
+
+        Spacer()
     }
 }

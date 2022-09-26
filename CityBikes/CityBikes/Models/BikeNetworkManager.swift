@@ -12,8 +12,9 @@ import SwiftUI
 
 
 public struct BikeNetworkManager {
+
     
-    static func saveToCityBikes(from bikeNetworkProperties: [BikesNetworkProperties], using managedObjectContext: NSManagedObjectContext) {
+   public func saveToCityBikes(from bikeNetworkProperties: [BikesNetworkProperties], using managedObjectContext: NSManagedObjectContext) {
 
         var tmpNetwork = [BikeNetwork]()
         
@@ -69,6 +70,7 @@ public struct BikeNetworkManager {
 
     
     static func getBikeNetworks(completion: @escaping ([BikesNetworkProperties]) -> ()) {
+       
         print("Fetching data")
         guard let url = URL(string: "https://api.citybik.es/v2/networks") else {
             print("Invalid URL")

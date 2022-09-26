@@ -12,13 +12,11 @@ struct LocationsView: View {
     
     @StateObject var viewModel = LocationsViewModel()
     
-    
-
-    
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [SortDescriptor(\.country), SortDescriptor(\.city)])
     var bikes: FetchedResults<BikeNetwork>
 
+    let bikesNetworkManager: BikeNetworkManager!
     
     var body: some View {
 
@@ -45,7 +43,8 @@ struct LocationsView: View {
             
             Task {
                 if bikes.isEmpty {
-                    BikeNetworkManager.saveToCityBikes(from: bikesNetwork, using: moc)
+                    
+                    bikesNetworkManager.saveToCityBikes(from: bikesNetwork, using: moc)
                 }
 
             }

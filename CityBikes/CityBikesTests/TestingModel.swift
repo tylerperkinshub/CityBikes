@@ -13,7 +13,7 @@ import CityBikes
 @testable import CityBikes
 
 class TestingData: XCTestCase {
-    
+
     func testGetBikeNetworks() {
         guard
             let path = Bundle.main.path(forResource: "test", ofType: "json")
@@ -37,8 +37,9 @@ class TestingData: XCTestCase {
     }
     
     func testBikeNetworksCanStoreObejects() {
-        let managedObjectContext = setUpInMemoryManagedObjectContext()
-        let dataHelper = CoreDataHelper(context: managedObjectContext)
+
+        var managedObjectContext = setUpInMemoryManagedObjectContext()
+        var dataHelper = CoreDataHelper(context: managedObjectContext)
         
         dataHelper.bikeNetworks()
         
@@ -48,7 +49,14 @@ class TestingData: XCTestCase {
             XCTAssertNotNil(bikeNetworks)
             XCTAssertTrue(bikeNetworks.count == 5, "There should have been 5 bike networks inserted by bikeNetworks()")
         } catch {}
+        
     }
+    
+    
+    
+    
+    
+    
     
     
     

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8E1D0E1128DFEC8C0031B295 /* BikeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1D0E1028DFEC8C0031B295 /* BikeNetworkManager.swift */; };
 		8E1D0E1728E0D7130031B295 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1D0E1628E0D7130031B295 /* CoreDataHelpers.swift */; };
+		8E2ED00D28E263EB001F4B83 /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2ED00C28E263EB001F4B83 /* LocationDetailViewModel.swift */; };
 		8E41B26728E0E49500FFD1BB /* TestingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41B26628E0E49500FFD1BB /* TestingModel.swift */; };
 		8E6FD6AE28DE8BA300674E57 /* CityBikes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E6FD6AC28DE8BA300674E57 /* CityBikes.xcdatamodeld */; };
 		8E6FD6B128DE8EA100674E57 /* BikeNetwork+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6FD6AF28DE8EA100674E57 /* BikeNetwork+CoreDataClass.swift */; };
@@ -35,18 +36,12 @@
 			remoteGlobalIDString = 8EFD022828D5BB7F00A85DC4;
 			remoteInfo = CityBikes;
 		};
-		8EFD024928D5BB8100A85DC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8EFD022128D5BB7F00A85DC4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EFD022828D5BB7F00A85DC4;
-			remoteInfo = CityBikes;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8E1D0E1028DFEC8C0031B295 /* BikeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeNetworkManager.swift; sourceTree = "<group>"; };
 		8E1D0E1628E0D7130031B295 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
+		8E2ED00C28E263EB001F4B83 /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
 		8E41B26628E0E49500FFD1BB /* TestingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingModel.swift; sourceTree = "<group>"; };
 		8E6FD6AD28DE8BA300674E57 /* CityBikes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CityBikes.xcdatamodel; sourceTree = "<group>"; };
 		8E6FD6AF28DE8EA100674E57 /* BikeNetwork+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BikeNetwork+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -59,7 +54,6 @@
 		8EFD023328D5BB8100A85DC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8EFD023528D5BB8100A85DC4 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8EFD023E28D5BB8100A85DC4 /* CityBikesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityBikesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EFD024828D5BB8100A85DC4 /* CityBikesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityBikesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFD025B28D5BC4D00A85DC4 /* NetworkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkList.swift; sourceTree = "<group>"; };
 		8EFD026328D5BF0300A85DC4 /* CBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBError.swift; sourceTree = "<group>"; };
 		8EFD026B28D5D52100A85DC4 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
@@ -83,19 +77,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EFD024528D5BB8100A85DC4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8ECFA72828DE97CD006A20A6 /* LocationDetailView */ = {
 			isa = PBXGroup;
 			children = (
+				8E2ED00C28E263EB001F4B83 /* LocationDetailViewModel.swift */,
 				8ECFA72928DE97F4006A20A6 /* LocationDetailView.swift */,
 			);
 			path = LocationDetailView;
@@ -115,7 +103,6 @@
 			children = (
 				8EFD022928D5BB7F00A85DC4 /* CityBikes.app */,
 				8EFD023E28D5BB8100A85DC4 /* CityBikesTests.xctest */,
-				8EFD024828D5BB8100A85DC4 /* CityBikesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,24 +217,6 @@
 			productReference = 8EFD023E28D5BB8100A85DC4 /* CityBikesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8EFD024728D5BB8100A85DC4 /* CityBikesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8EFD025828D5BB8100A85DC4 /* Build configuration list for PBXNativeTarget "CityBikesUITests" */;
-			buildPhases = (
-				8EFD024428D5BB8100A85DC4 /* Sources */,
-				8EFD024528D5BB8100A85DC4 /* Frameworks */,
-				8EFD024628D5BB8100A85DC4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8EFD024A28D5BB8100A85DC4 /* PBXTargetDependency */,
-			);
-			name = CityBikesUITests;
-			productName = CityBikesUITests;
-			productReference = 8EFD024828D5BB8100A85DC4 /* CityBikesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -262,10 +231,6 @@
 						CreatedOnToolsVersion = 13.3.1;
 					};
 					8EFD023D28D5BB8100A85DC4 = {
-						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = 8EFD022828D5BB7F00A85DC4;
-					};
-					8EFD024728D5BB8100A85DC4 = {
 						CreatedOnToolsVersion = 13.3.1;
 						TestTargetID = 8EFD022828D5BB7F00A85DC4;
 					};
@@ -286,7 +251,6 @@
 			targets = (
 				8EFD022828D5BB7F00A85DC4 /* CityBikes */,
 				8EFD023D28D5BB8100A85DC4 /* CityBikesTests */,
-				8EFD024728D5BB8100A85DC4 /* CityBikesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -309,13 +273,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EFD024628D5BB8100A85DC4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -327,6 +284,7 @@
 				8EFD025C28D5BC4D00A85DC4 /* NetworkList.swift in Sources */,
 				8EFD026428D5BF0300A85DC4 /* CBError.swift in Sources */,
 				8E1D0E1128DFEC8C0031B295 /* BikeNetworkManager.swift in Sources */,
+				8E2ED00D28E263EB001F4B83 /* LocationDetailViewModel.swift in Sources */,
 				8E1D0E1728E0D7130031B295 /* CoreDataHelpers.swift in Sources */,
 				8EFD027128D6F34A00A85DC4 /* NetworkCell.swift in Sources */,
 				8EFD026C28D5D52200A85DC4 /* LocationsViewModel.swift in Sources */,
@@ -348,13 +306,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EFD024428D5BB8100A85DC4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -362,11 +313,6 @@
 			isa = PBXTargetDependency;
 			target = 8EFD022828D5BB7F00A85DC4 /* CityBikes */;
 			targetProxy = 8EFD023F28D5BB8100A85DC4 /* PBXContainerItemProxy */;
-		};
-		8EFD024A28D5BB8100A85DC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8EFD022828D5BB7F00A85DC4 /* CityBikes */;
-			targetProxy = 8EFD024928D5BB8100A85DC4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -585,42 +531,6 @@
 			};
 			name = Release;
 		};
-		8EFD025928D5BB8100A85DC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6DMEA6Z5ZU;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.typerdev.CityBikesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CityBikes;
-			};
-			name = Debug;
-		};
-		8EFD025A28D5BB8100A85DC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6DMEA6Z5ZU;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.typerdev.CityBikesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CityBikes;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -647,15 +557,6 @@
 			buildConfigurations = (
 				8EFD025628D5BB8100A85DC4 /* Debug */,
 				8EFD025728D5BB8100A85DC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8EFD025828D5BB8100A85DC4 /* Build configuration list for PBXNativeTarget "CityBikesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8EFD025928D5BB8100A85DC4 /* Debug */,
-				8EFD025A28D5BB8100A85DC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
